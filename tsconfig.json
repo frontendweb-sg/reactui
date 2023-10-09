@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "types",
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "Node",
+    "target": "ES6",
+    "module": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "emitDeclarationOnly": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2015"],
+    "baseUrl": "./",
+    "paths": {
+      "@/": ["src/"]
+    }
+  },
+  "include": ["src", "src/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "examples",
+    "src/**/*.stories.(ts|tsx)",
+    "src/**/*.test.tsx"
+  ]
+}

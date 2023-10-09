@@ -1,0 +1,91 @@
+.fw-dropdown {
+  position: relative;
+  min-width: 200px;
+  &-clear {
+    position: absolute;
+    right: 10px;
+    button {
+      cursor: pointer;
+      visibility: hidden;
+      background-color: transparent;
+      border: none;
+      padding: 3px 5px;
+      &:hover {
+        background-color: gray;
+      }
+    }
+  }
+
+  &-placeholder {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    &:focus-visible {
+      outline-width: 1px;
+      outline-color: $border-color;
+    }
+    &:hover {
+      .fw-dropdown-clear {
+        button {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    position: absolute;
+    padding: 12px;
+    border: 1px solid $border-color;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.231372549);
+    border-radius: 4px;
+  }
+
+  &-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-left: 10px;
+      }
+      padding: 5px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+      }
+      &.active {
+        background-color: #eee;
+      }
+
+      &:hover {
+        &:not(.active) {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+
+  &-listbox {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-top: 10px;
+    &::-webkit-scrollbar {
+      width: 12px;
+      padding: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #eee;
+      margin: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: black;
+    }
+  }
+}

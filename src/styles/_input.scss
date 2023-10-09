@@ -1,0 +1,27 @@
+.fw-input {
+  border: 1px solid $border-color;
+  padding: 5px;
+  position: relative;
+
+  &-addon {
+    display: flex;
+    align-items: center;
+  }
+  &-control {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    color: $text-color;
+  }
+  &-error {
+    color: $danger;
+  }
+
+  &-invalid {
+    border-color: $danger;
+  }
+
+  &-valid {
+    border-color: $success;
+  }
+}
