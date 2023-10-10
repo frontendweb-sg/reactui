@@ -53,12 +53,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       else onChange?.(event, event.target.value);
     };
 
+    console.log("error", error);
     return (
       <div
         className={classNames(
           parentClass,
-          error && `${parentClass}-invalid`,
-          touch && `${parentClass}-valid`,
+          error && touch && `${parentClass}-invalid`,
+          touch && !error && `${parentClass}-valid`,
           className
         )}
         data-testid={testid}
